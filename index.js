@@ -1,9 +1,6 @@
 const fs = require("fs");
 const csv = require("csv-parser");
 
-// I decided to implement it this way to handle cases where there are values that match multiple characteristics.
-// For example, if I were to insert a sixth line identical to the fourth, both would be printed.
-
 const CSV_HEADERS = [
   "Id",
   "Article Name",
