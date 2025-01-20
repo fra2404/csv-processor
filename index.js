@@ -11,6 +11,11 @@ const CSV_HEADERS = [
 ];
 
 function processCSV(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.error(`Error: File not found - ${filePath}`);
+    return;
+  }
+
   const records = [];
 
   fs.createReadStream(filePath)
